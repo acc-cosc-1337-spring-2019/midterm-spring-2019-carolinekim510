@@ -1,5 +1,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
+#include "die.h"
+
 //write include statement for die header
 
 TEST_CASE("Test configuration setup")
@@ -13,5 +15,14 @@ Use a loop to roll 10 times and assert that each time value is from 1 to 6.
 */
 TEST_CASE("Test rolls") 
 {
-	
+	Die game;
+
+	for (int i = 0; i < 10; i++)
+	{
+		game.roll();
+
+		REQUIRE(game.rolled_value() >= 1);
+		REQUIRE(game.rolled_value() <= 6);
+
+	}
 }

@@ -1,3 +1,10 @@
+#include "die.h"
+#include "roll.h"
+#include <vector>
+#include <iostream>
+
+using std::vector;
+using std::cout;
 /*
 Create two Die instances.
 Create a vector of Roll
@@ -8,6 +15,22 @@ Loop through vector of Roll and output roll result
 */
 int main() 
 {
+	Die die1;
+	Die die2;
+	vector<Roll> vecRoll;
 	
-	return 0;
+	for (int i = 0; i < 20; i++)
+	{
+		Roll game(die1, die2);
+		game.roll();
+		cout << "#1 Dice: " << game.value_1() << " " << "#2 Dice: " << game.value_2() << "\n";
+		vecRoll.push_back(game);
+	}
+
+
+	for (auto c : vecRoll)
+	{
+		cout << "Dices roll results: " << c.result() << "\n";
+	}
+
 }
