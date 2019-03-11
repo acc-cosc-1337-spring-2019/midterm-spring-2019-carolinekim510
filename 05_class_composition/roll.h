@@ -9,7 +9,7 @@
 class Roll
 {
 public:
-	Roll(Die& d1, Die& d2) : die1(d1), die2(d2) {};
+	Roll(Die& d1, Die& d2) : die1(d1), die2(d2) {};		//die1, die2, ¶ó´Â object¸¦ ¸¸µë
 	void roll();
 	std::string result();
 	int value_1();

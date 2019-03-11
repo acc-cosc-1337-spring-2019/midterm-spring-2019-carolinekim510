@@ -1,13 +1,14 @@
 //roll class implementation
 #include "roll.h"
+#include <string>
 
 void Roll::roll()
 {
 	die1.roll();
 	die2.roll();
 
-	die1_roll_value = value_1();  // value came from class Die -> to value_1 -> private variable.
-	die2_roll_value = value_2();
+	die1_roll_value = die1.rolled_value();  //die에서 넘어온값이 die1_roll_value로 바뀜
+	die2_roll_value = die2.rolled_value();
 
 	rolled = true;
 }
@@ -23,17 +24,20 @@ std::string Roll::result()
 		return "Natural";
 	}
 	else
+	{
 		return "Points";
+	}
+		
 }
 
 int Roll::value_1()
 {
-	return die1.rolled_value();  // rolled_value from class Die
+	return die1_roll_value;  
 }
 
 int Roll::value_2()
 {
-	return die2.rolled_value(); // rolled_value from class Die
+	return die2_roll_value;
 }
 
 bool Roll::craps()
