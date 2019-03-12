@@ -20,3 +20,28 @@ Point
 
 (Loop at least 20 times and create an assert in the loop.)
 */
+
+TEST_CASE("Test to check returning valid result")
+{
+	Die die1;
+	Die die2;
+	Roll g(die1, die2);
+
+	for (int i = 0; i < 20; i++)
+	{
+		g.roll();
+		if (g.value_1() + g.value_2() == 2 || g.value_1() + g.value_2() == 3 || g.value_1() + g.value_2() == 12)
+		{
+			REQUIRE(g.result() == "Craps");
+		}
+		else if (g.value_1() + g.value_2() == 7 || g.value_1() + g.value_2() == 11)
+		{
+			REQUIRE(g.result() == "Natural");
+		}
+		else
+			REQUIRE(g.result() == "Points");
+
+	}
+}
+
+

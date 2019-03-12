@@ -23,14 +23,9 @@ int main()
 	{
 		Roll game(die1, die2);
 		game.roll();
-		cout << "#1 Dice: " << game.value_1() << " " << "#2 Dice: " << game.value_2() << "\n";
+		cout << "\n#1 Die: " << game.value_1() << " " << "#2 Die: " << game.value_2() << "\n";
 		vecRoll.push_back(game);
-	}
-
-
-	for (auto c : vecRoll)
-	{
-		cout << "Dices roll results: " << c.result() << "\n";
+		cout << "Dice roll result: " << game.result() << "\n";
 	}
 
 }
