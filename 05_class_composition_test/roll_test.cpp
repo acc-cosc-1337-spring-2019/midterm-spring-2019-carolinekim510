@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "roll.h"
+#include <iostream>
 
 //write include statement for roll header
 
@@ -12,6 +13,25 @@ Must roll first!
 */
 
 
+TEST_CASE("Test to check before returning result")
+{
+	Die die1;
+	Die die2;
+	Roll g(die1, die2);
+
+	// Warns to roll the dice first before asks the result.
+	REQUIRE("Must Roll FIRST!");
+
+	// Roll the dice
+	g.roll();
+	g.result();
+
+}
+
+
+
+
+
 /*
 Write a test case to assert that every dice roll returns a valid result:
 Craps
@@ -20,6 +40,7 @@ Point
 
 (Loop at least 20 times and create an assert in the loop.)
 */
+
 
 TEST_CASE("Test to check returning valid result")
 {

@@ -42,7 +42,7 @@ int Roll::value_2()
 
 bool Roll::craps()
 {
-	if (die1_roll_value + die2_roll_value == 2 || die1_roll_value + die2_roll_value == 3 || die1_roll_value + die2_roll_value == 12)
+	if (die1.rolled_value() + die2.rolled_value() == 2 || die1.rolled_value() + die2.rolled_value() == 3 || die1.rolled_value() + die2.rolled_value() == 12)
 	{
 		return true;
 	}
@@ -52,10 +52,11 @@ bool Roll::craps()
 
 bool Roll::natural()
 {
-	if (die1_roll_value + die2_roll_value == 7 || die1_roll_value + die2_roll_value == 11)
+	if (die1.rolled_value() + die2.rolled_value() == 7 || die1.rolled_value() + die2.rolled_value() == 11)
 	{
 		return true;
 	}
 	else
 		return false;
 }
+
