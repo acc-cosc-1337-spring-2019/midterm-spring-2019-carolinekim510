@@ -18,8 +18,12 @@ public:
 	int rolled_value() const;
 private:
 	int roll_value;
-	int sides{ 6 };
+	int sides = 6;
 };
 
 
 #endif // !DIE_H;
+
+
+
+//MIDTERM 3/15

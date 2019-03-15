@@ -1,3 +1,4 @@
+
 #include "dna_consensus.h"
 #include <vector>
 #include <string>
@@ -12,26 +13,19 @@ int main()
 	int choice;
 	int string_count;
 	string dna_str;
+	std::vector<string> dna_strings = {"ATCCAGCT", "GGGCAACT", "ATGGATCT", "AAGCAACC", "TTGGAACT", "ATGCCATT", "ATGGCACT"};
 
 	do
 	{
-		cout << "Enter how many DNA strings you will be entering: ";
-		cin >> string_count;
+		cout << "Processing...." << "\n";
+		cout << dna_consensus(dna_strings) << "\n";
 
-		for (int i = 0; i < string_count; i++)
-		{
-			cout << "Enter dna strings: ";
-			cin >> dna_str;
-
-			std::vector<string> dna_strings;
-			dna_strings.push_back(dna_str);
-			
-			void char_count(std::vector<std::string> dna_strings);
-
-		}
-
-		cout << "Enter 1 to test again, any other to exit; ";
+		cout << "\nEnter 1 to see it again, any other to exit. ";
 		cin >> choice;
+
 	} while (choice == 1);
 
 }
+
+
+//MIDTERM 3/15

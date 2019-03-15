@@ -12,3 +12,7 @@ TEST_CASE("Test DNA hamming count")
 {
 	REQUIRE(get_dna_hamming_distance("GAGCCTACTAACGGGAT", "CATCGTAATGACGGCCT") == 7);
 }
+
+
+
+//MIDTERM 3/15

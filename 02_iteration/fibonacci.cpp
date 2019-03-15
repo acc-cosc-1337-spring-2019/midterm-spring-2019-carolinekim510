@@ -25,3 +25,7 @@ int get_fibonacci(std::string str)
 	}
 	return third;
 }
+
+
+
+//MIDTERM 3/15

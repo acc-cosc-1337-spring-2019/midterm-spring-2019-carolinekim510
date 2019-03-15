@@ -1,5 +1,5 @@
 #include "die.h"
-#include <cstdlib>
+#include <random>
 
 /*
 Create a Die class function code to model a game die with 6 sides
@@ -10,10 +10,14 @@ public roll function returns a number from 1 to 6(search C++ random function)
 
 void Die::roll()
 {
-	roll_value = std::rand() % 6 + 1;
+	roll_value = std::rand() % sides + 1;
 }
 
 int Die::rolled_value() const
 {
 	return roll_value;
 }
+
+
+
+//MIDTERM 3/15

@@ -69,3 +69,6 @@ bool Roll::natural()
 	else
 		return false;
 }
+
+
+//MIDTERM 3/15

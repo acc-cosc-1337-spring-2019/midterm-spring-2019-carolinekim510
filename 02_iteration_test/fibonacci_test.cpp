@@ -19,3 +19,6 @@ TEST_CASE("Test get fibonacci")
 	REQUIRE(get_fibonacci("carolinekim") == 55);
 	REQUIRE(get_fibonacci("flower") == 5);
 }
+
+
+//MIDTERM 3/15

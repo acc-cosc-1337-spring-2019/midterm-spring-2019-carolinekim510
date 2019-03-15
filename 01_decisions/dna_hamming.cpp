@@ -31,3 +31,6 @@ int get_dna_hamming_distance(const std::string a, const std::string b)
 
 	return distance;
 }
+
+
+//MIDTERM 3/15

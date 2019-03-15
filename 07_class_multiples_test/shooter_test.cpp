@@ -11,28 +11,30 @@ Point
 
 */
 
-/*
+
 TEST_CASE("Test shooter returns a roll and a result")
 {
 	Die die1;
 	Die die2;
-	Roll shoot(Die & d1, Die & d2);
+	Shooter a;
+	Roll g = a.shoot(die1, die2);
 
 	for (int i = 0; i < 20; i++)
 	{
-		g.roll();
-		if (g.value_1() + g.value_2() == 2 || g.value_1() + g.value_2() == 3 || g.value_1() + g.value_2() == 12)
-		{
-			REQUIRE(g.result() == "Craps");
-		}
-		else if (g.value_1() + g.value_2() == 7 || g.value_1() + g.value_2() == 11)
+		if (g.result() == "Natural")
 		{
 			REQUIRE(g.result() == "Natural");
 		}
-		else
+		else if (g.result() == "Craps")
+		{
+			REQUIRE(g.result() == "Craps");
+		}
+		else 
 			REQUIRE(g.result() == "Points");
 
 	}
 }
 
-*/
+
+
+//MIDTERM 3/15
